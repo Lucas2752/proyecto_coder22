@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200&display=swap");
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Lexend Deca";
+    text-decoration: none;
+}
+
+header{
+    background: #2d3047;
+}
+
+header nav .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.brand img{
+    width: 50px;
+}
+
+.links{
+    display: flex;
+}
+
+.links a{
+    padding: 30px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 5px solid transparent;
+    transition: border .3s ease;
+}
+
+.links a:hover{
+    border-bottom-color: yellow;
+}
+
+a.active{
+    border-bottom-color: yellow;
+}
+
+
+/* index inicio*/
+    main{
+        font-size: 3rem;
+        display: grid;
+        padding: 10px;
+        border: 3px solid #000;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-rows: ; 
+        gap: 1px;
+    }
+    .grid-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 10px;
+
+        background-repeat: no-repeat;
+        /* background-color: #2d3047; */
+        border-bottom: gold;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .grid-item:hover{
+        -webkit-transform: rotate(360deg);
+        transition: 1s;
+    }
+    body{
+        background-color: #2d3047;
+    }
+    @media (min-width: 600px){
+        .grid-item{
+            grid-column: minmax(auto-fit);
+            grid-row: minmax(auto-fit);
+        }
+    }
+
+
+
+
+
+/* index inicio
+main{
+    font-size: 3rem;
+    display: grid;
+    padding: 10px;
+    border: 3px solid #000;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: ; 
+    gap: 10px;
+}
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    gap: 10px;
+
+    background-repeat: no-repeat;
+    background-color: #2d3047;
+    border-bottom: gold;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.grid-item:hover{s
+    -webkit-transform: rotate(360deg);
+    transition: 1s;
+}
+body{
+    background-color: #2d3047;
+}
+@media (min-width: 600px){
+    .grid-item{
+        grid-column: minmax(auto-fit);
+        grid-row: minmax(auto-fit);
+    }
+}
+/* index final */
+ */
