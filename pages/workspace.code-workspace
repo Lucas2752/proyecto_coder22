@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "..\\.git"
+		},
+		{
+			"path": "..\\css"
+		},
+		{
+			"path": "..\\img"
+		},
+		{
+			"path": "..\\logo"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\wireframe"
+		}
+	]
+}
