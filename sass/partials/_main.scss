@@ -1,0 +1,26 @@
+main{
+    font-size: map-get($spacing, spacing-mediumrem);
+    display: grid;
+    padding: map-get($spacing, spacing-mediumpx);
+    padding-top: map-get($spacing, spacing-largepx);
+    padding-bottom: map-get($spacing, spacing-largepx);
+}
+.grid{
+    @include flex(grid, repeat(auto-fit, minmax(350px, 1fr)), map-get($spacing, spacing-smallpx));
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    // gap: map-get($spacing, spacing-smallpx);
+    &__item{
+         padding: map-get($spacing, spacing-mediumpx);
+    }
+    &__item:hover{
+        -webkit-transform: scale(1.1,1.1);
+        transition: 1s;
+        }
+}
+@media (min-width: 600px){
+    .grid__item{
+        grid-column: minmax(auto-fit);
+        grid-row: minmax(auto-fit);
+    }
+}
