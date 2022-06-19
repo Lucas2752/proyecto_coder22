@@ -1,30 +1,205 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200&display=swap");
-main {
-  font-size: 3rem;
-  display: grid;
-  padding: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px; }
+h3 {
+  padding: 6px; }
 
-.grid, .parrafo {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 1px; }
-  .grid__item {
-    padding: 10px; }
-  .grid__item:hover {
-    -webkit-transform: scale(1.1, 1.1);
-    transition: 1s; }
+p {
+  justify-content: center;
+  padding: 6px; }
 
-@media (min-width: 600px) {
-  .grid__item {
-    grid-column: minmax(auto-fit);
-    grid-row: minmax(auto-fit); } }
+.contenedor, .contenedor2 {
+  background-color: rgba(199, 183, 177, 0.559);
+  flex-flow: row wrap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px  300px); }
 
-.footer {
-  color: white;
-  padding: 10px; }
+.contenedor figure {
+  margin: 25px;
+  position: relative;
+  height: 350px;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+  cursor: pointer; }
 
-.parrafo {
-  text-align: center;
-  color: #303030; }
+.contenedor figure img {
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out; }
+
+.contenedor figure .capa {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 79, 95, 0.6);
+  transition: all 500ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center; }
+
+.contenedor figure:hover > .capa {
+  opacity: 1;
+  visibility: visible; }
+
+.contenedor figure:hover > .capa h3 {
+  margin-top: 30px;
+  margin-bottom: 15px; }
+
+.contenedor figure .capa h3 {
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 120px;
+  transition: all 500ms ease-out;
+  margin-top: 30px; }
+
+.contenedor figure .capa p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 300px;
+  margin: auto; }
+
+.contenedor2 figure {
+  border: 2px solid #074f5f;
+  padding: 6px;
+  background-color: #fff;
+  margin: 25px;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5); }
+
+.contenedor2 figure .capa2 {
+  width: 100%;
+  height: 100%;
+  visibility: visible; }
+
+.contenedor2 figure .capa2 h3 {
+  color: black;
+  font-weight: 400; }
+
+.contenedor2 figure .capa2 p {
+  color: black;
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 350px;
+  margin: auto; }
+
+.contenedor2 figure img {
+  width: 100%;
+  height: 100%; }
+
+@media (max-width: 780px) {
+  .contenedor {
+    flex-direction: row;
+    margin: 20px; } }
+
+@media (max-width: 780px) {
+  .contenedor {
+    display: none; } }
+
+@media (min-width: 780px) {
+  .contenedor2 {
+    display: none; } }
+
+* {
+  margin-top: auto;
+  padding: 5px;
+  box-sizing: border-box;
+  transition: 0.5s; }
+
+body {
+  height: 100vh;
+  width: 100%;
+  position: relative; }
+  body footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 1rem 3%;
+    background-color: #074f5f;
+    display: flex;
+    flex-direction: column; }
+  body .direc, body .terminos, body .copyright {
+    margin: 1px; }
+  body .direc {
+    color: #fff;
+    opacity: 0.6; }
+  body .terminos {
+    color: #fff;
+    opacity: 0.7;
+    padding-bottom: 7px; }
+
+.copyright {
+  color: #fff;
+  opacity: 0.6; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 100%;
+  background-color: #074f5f;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.navbar {
+  width: 80%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.logo {
+  padding-right: 20px;
+  width: 180px;
+  cursor: pointer;
+  font-size: 40px;
+  color: #fff;
+  font-family: 'Allison', cursive; }
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+  position: relative; }
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: monospace;
+  font-size: 1.2rem; }
+
+.active::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -12px; }
+
+.navbar ul li::before {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  transition: 0.4s ease-out; }
+
+.navbar ul li:hover::before {
+  width: 100%; }
+
+@media (max-width: 1140px) {
+  .navmenu {
+    display: inline;
+    width: 100%;
+    padding-top: 20px; } }
