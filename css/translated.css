@@ -3,8 +3,7 @@ h3 {
   padding: 6px; }
 
 p {
-  justify-content: center;
-  padding: 6px; }
+  justify-content: center; }
 
 .contenedor, .contenedor2 {
   background-color: rgba(199, 183, 177, 0.559);
@@ -13,7 +12,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 100px  300px); }
+  min-height: calc($fullvh - 100px  300px); }
 
 .contenedor figure {
   margin: 25px;
@@ -24,13 +23,12 @@ p {
   border-radius: 6px;
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
   cursor: pointer; }
+  .contenedor figure figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out; }
 
-.contenedor figure img {
-  width: 100%;
-  height: 100%;
-  transition: all 500ms ease-out; }
-
-.contenedor figure .capa {
+.capa {
   position: absolute;
   top: 0;
   width: 100%;
@@ -40,29 +38,26 @@ p {
   opacity: 0;
   visibility: hidden;
   text-align: center; }
+  .capa h3 {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px; }
+  .capa p {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 300px;
+    margin: auto; }
 
 .contenedor figure:hover > .capa {
   opacity: 1;
   visibility: visible; }
-
-.contenedor figure:hover > .capa h3 {
-  margin-top: 30px;
-  margin-bottom: 15px; }
-
-.contenedor figure .capa h3 {
-  color: #fff;
-  font-weight: 400;
-  margin-bottom: 120px;
-  transition: all 500ms ease-out;
-  margin-top: 30px; }
-
-.contenedor figure .capa p {
-  color: #fff;
-  font-size: 15px;
-  line-height: 1.5;
-  width: 100%;
-  max-width: 300px;
-  margin: auto; }
+  .contenedor figure:hover > .capa h3 {
+    margin-top: 30px;
+    margin-bottom: 15px; }
 
 .contenedor2 figure {
   border: 2px solid #074f5f;
@@ -71,34 +66,20 @@ p {
   margin: 25px;
   border-radius: 6px;
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5); }
-
-.contenedor2 figure .capa2 {
-  width: 100%;
-  height: 100%;
-  visibility: visible; }
-
-.contenedor2 figure .capa2 h3 {
-  color: black;
-  font-weight: 400; }
-
-.contenedor2 figure .capa2 p {
-  color: black;
-  font-size: 15px;
-  line-height: 1.5;
-  max-width: 350px;
-  margin: auto; }
-
-.contenedor2 figure img {
-  width: 100%;
-  height: 100%; }
+  .contenedor2 figure .capa2 h3 {
+    color: black;
+    font-weight: 400; }
+  .contenedor2 figure .capa2 p {
+    color: black;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 350px;
+    margin: auto; }
 
 @media (max-width: 780px) {
   .contenedor {
     flex-direction: row;
-    margin: 20px; } }
-
-@media (max-width: 780px) {
-  .contenedor {
+    margin: 20px;
     display: none; } }
 
 @media (min-width: 780px) {
@@ -148,14 +129,6 @@ body {
   background-position: center;
   background-repeat: no-repeat; }
 
-.navbar {
-  width: 80%;
-  margin: auto;
-  padding: 35px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
 .logo {
   padding-right: 20px;
   width: 180px;
@@ -164,17 +137,34 @@ body {
   color: #fff;
   font-family: 'Allison', cursive; }
 
-.navbar ul li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 10px;
-  position: relative; }
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-family: monospace;
-  font-size: 1.2rem; }
+.navbar {
+  width: 80%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative; }
+  .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: monospace;
+    font-size: 1.2rem; }
+  .navbar ul li::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s ease-out; }
+  .navbar ul li:hover::before {
+    width: 100%; }
 
 .active::after {
   content: "";
@@ -185,21 +175,96 @@ body {
   left: 0;
   bottom: -12px; }
 
-.navbar ul li::before {
-  content: "";
-  height: 3px;
-  width: 0%;
-  background: #fff;
-  position: absolute;
-  left: 0;
-  bottom: -12px;
-  transition: 0.4s ease-out; }
-
-.navbar ul li:hover::before {
-  width: 100%; }
-
 @media (max-width: 1140px) {
   .navmenu {
     display: inline;
     width: 100%;
     padding-top: 20px; } }
+
+section {
+  height: 100vh;
+  width: 100%; }
+
+.contact {
+  background-color: rgba(199, 183, 177, 0.559);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.contact__right-side {
+  border: solid 2px #074f5f;
+  border-radius: 6px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 15px 7.3% 15px 4.7%;
+  width: 70%; }
+
+.contact__title {
+  font-size: 60px;
+  font-weight: 400;
+  margin-bottom: 70px;
+  text-transform: uppercase; }
+
+.contact__form-wrapper, .contact__input-line {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%; }
+
+.contact__input-line {
+  margin-bottom: 45px; }
+
+.contact__label {
+  font-size: 18px;
+  font-weight: 600; }
+
+.contact__input {
+  height: 30px;
+  outline: none;
+  padding: 5px 0;
+  border-bottom: 2px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  color: black;
+  background-color: transparent; }
+
+.contact__input {
+  height: 25px;
+  outline: none;
+  padding: 5px 0;
+  border-bottom: 2px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  color: black;
+  background-color: transparent;
+  resize: none; }
+
+.contact__submit-button {
+  padding: 18px 55px;
+  background-color: black;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px; }
+
+.contact__submit-button:hover {
+  background-color: #074f5f; }
+
+@media (max-width: 780px) {
+  .contact__right-side {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    height: 100%; } }
