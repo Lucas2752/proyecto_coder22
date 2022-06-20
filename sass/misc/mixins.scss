@@ -1,5 +1,0 @@
-@mixin flex($direction, $template, $gap) {
-    display: $direction;
-    grid-template-columns: $template;
-    gap: $gap;
-}

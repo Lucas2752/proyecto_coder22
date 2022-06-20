@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200&display=swap");
 
-@import "./misc/variables.scss";
-// @import "./misc/mixins.scss";
+// Misc
+@import "./misc/variables";
 
+// Partials
 @import "./partials/main";
 @import "./partials/footer";
 @import "./partials/header";
 
-
+// Views
 @import "./views/contacto";
 
