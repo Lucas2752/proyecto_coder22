@@ -1,10 +1,10 @@
-// Header
 *{
     margin: 0;
     padding: 0;
 }
 
 .container{
+    max-width: none;
     width: 100%;
     background-color: $color-verde;
     background-size: cover;

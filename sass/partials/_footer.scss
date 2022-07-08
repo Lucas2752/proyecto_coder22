@@ -27,20 +27,73 @@
 
 .direc{
     color: $color-blanco;
-    opacity: $opacity1;
 }
 
 .terminos{
     color: $color-blanco;
-    opacity: $opacity2;
     padding-bottom: 7px;
 }
 
 }.copyright{
     color: $color-blanco;
-    opacity: $opacity1;
 }
 
 
 
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -1rem;
+    &__button {
+        margin: 10px 5px 0;
+      }
+  }
+.social-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 70px;
+    height: 70px;
+    text-decoration: none;
+    &__inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border-radius: 100%;
+        background: $color-blanco;
+        text-align: center;
+      }
+    & svg {
+        height: 40%;
+        width: 40%;
+      }
+    &--facebook{
+        color: $color-facebook !important;
+      }
+    &--twitter{
+        color: $color-twitter !important;
+      }
+    &--pinterest{
+       color: $color-pinterest !important;
+      }
+    &--youtube{
+       color: $color-youtube !important;
+      }
+    &--instagram{
+       color: $color-instagram !important;
+      }
+  }
+
+
+
+ 
+
+  
 

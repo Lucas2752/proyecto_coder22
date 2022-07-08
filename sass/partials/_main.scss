@@ -8,7 +8,9 @@ p{
 }
 
 .contenedor, .contenedor2{
-    background-color: $color-contenedor;
+    background-color: $color-contenedor;  
+    padding-left: 5.5%;
+    padding-right: 5.5%;
     flex-flow: row wrap;
     width: 100%;
     display: flex;
@@ -17,9 +19,11 @@ p{
     min-height: calc($fullvh - 100px  300px);
 }
 .contenedor figure{
-    margin: 25px;
+    margin: auto;
     position: relative;
-    height: 350px;
+    margin-top: none;
+    margin-bottom: 22px;
+    height: 100%;
     width: 350px;
     overflow: hidden;
     border-radius: 6px;
@@ -74,12 +78,14 @@ p{
 
 
 .contenedor2 figure{
-    border: 2px solid $color-verde;
-    padding: 6px;
-    background-color: $color-blanco;
+    // border: 2px solid $color-verde;
+    // padding: 6px;
+    // background-color: $color-blanco;
     margin: 25px;
+    padding: 0 5.5% 0 5.5%;
     border-radius: 6px;
-    box-shadow: 0px 15px 25px $color-negro-bs;
+    // box-shadow: 0px 15px 25px $color-negro-bs;
+
     & .capa2 h3{
         color: $color-negro;
         font-weight: 400;
@@ -93,21 +99,104 @@ p{
     }    
 }
 
-@media (max-width: 780px){
+
+
+
+
+
+
+
+.intro{
+    font-family: 'Radley', serif;
+    font-size: 25px;
+    justify-content: center;
+    padding: 2% 6% 1% 6%;
+    color: rgb(41, 31, 92);
+
+}
+
+
+
+.contenedorMedio, .contenedorMedio2{
+    background-color: $color-contenedor;
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+    flex-flow: row wrap;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.medioImg{
+    margin: auto;
+    // padding: 10px 0 10px 0;
+    padding-bottom: 22px;
+}
+
+.medioImgl{
+    margin: auto;
+    padding: 0 0 22px 0;
+}
+
+
+
+
+
+@media (max-width: 1259px){
+    .medioImgl{
+        visibility: hidden;
+        position: absolute;
+    }
+
+}
+@media (max-width: 1000px){
+    .contenedorMedio3{
+        visibility: hidden;
+        position: absolute;
+    }
+    .medioImgxl{
+        visibility: hidden;
+        position: absolute;
+}
+}
+@media (max-width: 779px){
     .contenedor{
         flex-direction: row;
         margin: 20px;
         display: none;
+        & p{
+            max-width: 350px;
+            height: 1fr;
+        }
     }
+    .intro{
+        padding-left: 9%;
+        padding-right: 9%;
+    }
+
 }
+@media (max-width: 400px){
+    .contenedor{
+        flex-direction: row;
+        margin: 8px;
+        display: none;
+    }
+    .intro{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+}
+
+
+
 
 @media (min-width: 780px){
     .contenedor2{
         display: none;
     }
 }
-
-
-
 
 
