@@ -1,3 +1,5 @@
+//   Uso de grid para las imagenes sin interaccion de efectos/texto
+
 .contenedorMedio3{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -25,8 +27,3 @@
  .medio3{
      grid-column: 1 / 4;
  }
-
-.medioImgxl{
-        visibility: hidden;
-        position: absolute;
-}

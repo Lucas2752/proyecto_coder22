@@ -9,6 +9,9 @@ p{
 body{
     background-color: $color-contenedor;
 }
+
+    // Estilos para fotos de productos con animacion/texto
+
 .contenedor, .contenedor2{
     padding-left: 5.5%;
     padding-right: 5.5%;
@@ -91,13 +94,7 @@ body{
     }    
 }
 
-.intro{
-    font-family: 'Radley', serif;
-    font-size: 25px;
-    justify-content: center;
-    padding: 2% 6% 1% 6%;
-    color: rgb(41, 31, 92);
-}
+    // Estilos para fotos a modo ilustrativo
 
 .contenedorMedio, .contenedorMedio2{
     padding-left: 5.5%;
@@ -118,6 +115,16 @@ body{
     margin: auto;
     padding: 0 0 22px 0;
 }
+
+.intro{
+    font-family: 'Radley', serif;
+    font-size: 25px;
+    justify-content: center;
+    padding: 2% 6% 1% 6%;
+    color: rgb(41, 31, 92);
+}
+
+    // Adaptacion para distintas pantallas
 
 @media (max-width: 1000px){
     .medio1{

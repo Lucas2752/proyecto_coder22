@@ -3,6 +3,8 @@
     padding: 5%;
 }
 
+    // Contenedor de la seccion
+
 .mainContacto {
     background: #181818;
     color: #fff;
@@ -10,6 +12,8 @@
     font-family: 'Quicksand', sans-serif;
     padding: 0 1.5em;
 }
+
+    // Logo del formulario de contacto
 
 .logo2 {
     text-align: center;
@@ -21,7 +25,7 @@
     }
 }
 
-
+    // Estilo sombreado
 
 .contact-wrapper {
     box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
@@ -30,6 +34,8 @@
 .contact-wrapper > * {
     padding: 1em;
 }
+
+    // Formulario
 
 .contact-form {
     background: #222222d3;
